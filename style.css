@@ -25,11 +25,12 @@ body{
 header{
     background-image: url("casa\ plaino.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
 .header-container h1{
-    padding: 1em; 
+    padding: 1em 1em 1em 0.5em; 
     text-transform: uppercase;
     color: var(--txtcolor);
 }
