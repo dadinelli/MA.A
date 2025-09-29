@@ -46,7 +46,7 @@ header{
 
 .header-container h1{
     padding: 0.5em;
-    font-size: 2em;
+    font-size: 3em;
     font-family: "Vonique";
     
     color: white;
@@ -64,6 +64,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 1em 0;
     /*backdrop-filter: blur(15px);*/
 }
 
@@ -124,6 +125,7 @@ main{
 
 #currentLink{
     color: white;
+    margin: 0 0.5em;
 }
 
 #sidebar.visible{
@@ -135,10 +137,6 @@ main{
 
 #sidebar.visible a{
     color: #ffffff;
-}
-
-#progetti{
-    margin-top: 5em;
 }
 
 #menu{
@@ -194,6 +192,14 @@ main{
 
 main{
     width: 100%;
+}
+
+/*================
+PROGETTI
+================*/
+
+#progetti{
+    margin-top: 10em;
 }
 
 .project{
@@ -272,6 +278,33 @@ main{
     margin: 2em auto;
 }
 
+
+/*PROJECT CARD*/
+
+.main-content{
+    margin-top: 10em;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
+
+.prj-img{
+    flex: 2;
+    aspect-ratio: 16/9;
+}
+
+.prj-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-desc{
+    flex: 1;
+}
+
+
 #servizi, #pubblicazioni{
     color: var(--txtcolor);
     margin: 2em 1em;
@@ -339,9 +372,14 @@ main{
     flex: 1;
 }
 
+/*==================
+SLIDER
+==================*/
+
 .slider-wrapper{
     position: relative;
     max-width: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -351,12 +389,17 @@ main{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
 }
 
 .slider img{
+    width: 100%;
+    height: 100%;
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .slider-nav{
@@ -382,6 +425,11 @@ main{
     opacity: 1;
 }
 
+/*=================
+CONTATTI
+=================*/
+
+
 .contatti{
     width: 70%;
     /*margin: 5em auto auto auto;*/
@@ -405,7 +453,7 @@ main{
     padding: 1em;
 }
 
-.indirizzo{
+.contact{
     margin-top: 2em;
 }
 
@@ -415,6 +463,10 @@ main{
     flex-direction: row;
     justify-content: space-between;
 }
+
+/*=================
+FOOTER
+=================*/
 
 footer{
     display: flex;
@@ -463,6 +515,7 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
 
