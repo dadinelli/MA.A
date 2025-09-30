@@ -28,6 +28,7 @@ html{
     scroll-behavior: smooth;
     background-color: var(--bgcolor);
     color: var(--cleartxtcolor);
+    font-size: 1.2em;
 }
 
 body{
@@ -45,13 +46,19 @@ header{
 }
 
 .header-container h1{
-    padding: 0.5em;
-    font-size: 3em;
+    /*padding: 0.5em;*/
+    font-size: 4em;
     font-family: "Vonique";
     
     color: white;
     font-weight: 400;
     width: 100%;
+}
+
+#up-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-container{
@@ -64,7 +71,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: 2em;
     /*backdrop-filter: blur(15px);*/
 }
 
@@ -144,9 +151,10 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em 1em;
+    /*padding: 1em 1em;*/
     text-transform: uppercase;
     width: 40%;
+    height: 100%;
 }
 
 #menu a{
@@ -212,7 +220,7 @@ PROGETTI
     grid-template-rows: repeat(auto-fit, 150px);
     row-gap: 1em;
     column-gap: 1em;
-    margin: 1em;
+    margin: 2em;
 }
 
 .item{
@@ -243,6 +251,11 @@ PROGETTI
 .item a img:hover{
     opacity: 0;
 }
+
+.item a h3, .item a p{
+    color: var(--cleartxtcolor);
+}
+
 
 #box1{
     grid-column: 1/3;
@@ -288,6 +301,7 @@ PROGETTI
 .card{
     display: flex;
     flex-direction: row;
+    margin: 0 2em;
 }
 
 .prj-img{
@@ -302,8 +316,38 @@ PROGETTI
 
 .project-desc{
     flex: 1;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.project-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 2em 2em 2em;
+}
+
+.desc-left, .desc-right, .img-center{
+    flex: 1;
+}
+
+.desc-left, .desc-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-center img{
+    width: 100%;
+    height: 100%;
+}
 
 #servizi, #pubblicazioni{
     color: var(--txtcolor);
