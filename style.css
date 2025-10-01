@@ -28,7 +28,7 @@ html{
     scroll-behavior: smooth;
     background-color: var(--bgcolor);
     color: var(--cleartxtcolor);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 body{
@@ -47,12 +47,22 @@ header{
 
 .header-container h1{
     /*padding: 0.5em;*/
-    font-size: 4em;
+    font-size: 3.5em;
     font-family: "Vonique";
-    
     color: white;
     font-weight: 400;
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title-long{
+    display: block;
+}
+
+.title-short{
+    display: none;
 }
 
 #up-header{
@@ -133,6 +143,8 @@ main{
 #currentLink{
     color: white;
     margin: 0 0.5em;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 #sidebar.visible{
@@ -296,12 +308,14 @@ PROGETTI
 
 .main-content{
     margin-top: 10em;
+    min-height: 100vh;
+    padding: 0 2em;
 }
 
 .card{
     display: flex;
     flex-direction: row;
-    margin: 0 2em;
+    /*margin: 0 2em;*/
 }
 
 .prj-img{
@@ -332,7 +346,7 @@ PROGETTI
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 3em 2em 2em 2em;
+    padding: 5em 0 2em 0;
 }
 
 .desc-left, .desc-right, .img-center{
@@ -501,6 +515,10 @@ CONTATTI
     margin-top: 2em;
 }
 
+.contact i{
+    font-size: 2em;
+}
+
 .single-contact{
     width: 70%;
     display: flex;
@@ -532,13 +550,25 @@ footer{
     margin: 0.5em 0.5em;
 }
 
-@media screen and (max-width: 1000px){
+footer i{
+    color: var(--cleartxtcolor);
+}
+
+@media screen and (max-width: 1248px){
     html{
         font-size: 0.8em;
     }
     /*header{
         height: 50vh;
     }*/
+
+    .title-long{
+        display: none;
+    }
+
+    .title-short{
+        display: block;
+    }
 
     .contatti{
         flex-direction: column;
@@ -588,6 +618,15 @@ footer{
     #service-description a, #publications-description a{
         position: static;
         display: inline-block;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+
+    .project-info{
+        flex-direction: column;
+        align-items: center;
     }
 
     footer{
