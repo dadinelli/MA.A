@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="screen">
     <script src="utils.js"></script>
+    <script src="scipt.js" defer></script>
     <title>MA.A</title>
 </head>
 <body>
@@ -24,12 +25,12 @@
         <div id="up-header">
             <h1 class="title-long">MATERIA DARCHITETTURA</h1>
             <h1 class="title-short">MAA</h1>
-            <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
+            <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#8a817c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
         </div> 
         
         
         <ul id="sidebar" class="">
-            <li><button onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FFFFFF"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></button></li>
+            <li><button onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8a817c"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></button></li>
             <li><a href="lostudio.html" onclick="toggleSidebar()">Home</a></li>
             <li id="currentLink">Progetti</li>
             <li><a href="lostudio.html" onclick="toggleSidebar()">Lo Studio</a></li>
@@ -46,7 +47,98 @@
     </div>
 
     <main>
-    <div class="grid-container" id="progetti">
+
+    <div class="carousel-wrapper" data-carousel>
+        <button class="next-button" id="next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8a817c"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+        <button class="prev-button" id="prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8a817c"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+        <ul class="carousel" data-slides>
+            <li class="slide" data-active>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/20230502 41117.jpg" alt=""></a>
+                </div>
+                <h2>Progetto 1</h2>
+            </li>
+
+            <li class="slide" ii>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/casamarci.webp" alt=""></a>
+                </div>
+                <h2>Progetto 2</h2>
+            </li>
+
+            <li class="slide" iii>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/Ceresetto_Esterni_073.jpg" alt=""></a>
+                </div>
+                <h2>Progetto 3</h2>
+            </li>
+
+            <li class="slide" iiii>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/color palestra.png" alt=""></a>
+                </div>
+                <h2>Progetto 4</h2>
+            </li>
+
+            <li class="slide" ii>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/20130203_3150.jpg" alt=""></a>
+                </div>
+                <h2>Progetto 5</h2>
+            </li>
+
+            <li class="slide" ii>
+                <div class="img-container">
+                    <a href="projects/projectcard.html"><img src="imgs/N-O_2.png" alt=""></a>
+                </div>
+                <h2>Progetto 6</h2>
+            </li>
+
+            <li class="slide" iiii>
+                <div class="img-container">
+                    <a href=""><img src="imgs/Plaino_271021_Esterni_027.jpg" alt=""></a>
+                </div>
+                <h2>Progetto 7</h2>
+            </li>
+
+            <li class="slide">
+                <div class="img-container">
+                    <a href=""><img src="imgs/TreppoGrande_129.jpg" alt=""></a>
+                </div>
+                <div class="h2-container">
+                    <h2>Progetto 8</h2>
+                </div>
+            </li>
+        </ul>
+        <!--<div class="carousel" data-slides>
+            <div class="slide" data-active>
+                1
+            </div>
+            <div class="slide">
+                2
+            </div>
+            <div class="slide">
+                3
+            </div>
+            <div class="slide">
+                4
+            </div>
+            <div class="slide">
+                5
+            </div>
+            <div class="slide">
+                6
+            </div>
+            <div class="slide">
+                7
+            </div>
+            <div class="slide">
+                8
+            </div>
+        </div>-->
+    </div>
+
+    <!--<div class="grid-container" id="progetti">
         <div class="item" id="box1">
             <a href="projects/projectcard.html">
                 <div>
@@ -111,12 +203,11 @@
                 </div>
                 <img src="imgs/cucina.jpg" alt="">
             </a>
-        </div>
+        </div>-->
         <!--<div class="item" id="box9">9</div>
-        <div class="item" id="box10">10</div>-->
-    </div>
+        <div class="item" id="box10">10</div></div>-->
     </main>
-    <footer>
+    <!--<footer>
         <div id="footer-left">
             <p>Architectural Designer</p>
             <a href="https://www.instagram.com/materiadarchitettura/"><i class="fa-brands fa-square-instagram"></i></a>
@@ -131,6 +222,6 @@
             <p>Italian Architecture Firm based in Udine | FVG | Italy</p>
             <p>Via Cjavecis 7/1, Udine, Italy 33100</p>
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>
