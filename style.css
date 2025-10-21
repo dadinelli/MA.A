@@ -43,6 +43,7 @@ body{
     overflow-x: hidden;
     font-weight: 400;
     margin: 10em 4em 0 4em;
+    height: 100%;
 }
 
 header{
@@ -519,11 +520,12 @@ PROJECT SLIDER
     list-style: none;
     scroll-snap-type: x mandatory;
     overflow-x: hidden;
-    height: 54em;
+    height: 100%;
 }
 
 .carousel-wrapper{
     width: 100%;
+    height: 100%;
     position: relative;
     margin: 10em 0 4.5em 0;
 }
@@ -552,17 +554,18 @@ PROJECT SLIDER
     cursor: pointer;
 }
 
-/*.slide img{
+.slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     scroll-snap-align: start;
     overflow: hidden;
-}*/
+}
 
 .slide, .slide[ii], .slide[iii], .slide[iiii]{
     flex: 0 0 10em;
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
+    /*border: 1px solid red;*/
     height: 50em;
     align-content: center;
     text-align: center;
@@ -579,15 +582,18 @@ PROJECT SLIDER
     /*transform: translateY(-1.5em);*/
     opacity: 0;
     font-weight: 100;
-    font-size: 1em;
+    font-size: 1.2em;
     position: absolute;
     text-transform: uppercase;
-    bottom: 0;
-    z-index: auto;
+    bottom: 0.5em;
+    left: 1.5em;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    z-index: 2;
 }
 
-.slide[data-active] h2, .slide a:focus h2{
-    /*border: 1px red solid;*/
+.slide[data-active] h2, .slide a:focus h2, .slide:hover a h2{
+    /*border: 1px red solid;
     opacity: 1;
     font-weight: 100;
     position: absolute;
@@ -595,12 +601,21 @@ PROJECT SLIDER
     bottom: 0;
     transform: translateY(1.5em);
     color: var(--cleartxtcolor);
+    z-index: auto;*/
+
     transition: opacity 0.4s, transform 0.4s;
-    z-index: auto;
+    opacity: 1;
+}
+
+.slide[data-active] img{
+    transition: opacity 0.4s, transform 0.4s;
+    opacity: 0.2;
 }
 
 .h2-container{
-    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .slide[ii]{
@@ -617,7 +632,7 @@ PROJECT SLIDER
 
 .slide:hover, .slide a:focus{
     cursor: pointer;
-    opacity: 0.7;
+    
     outline: none;
 }
 
@@ -631,6 +646,11 @@ PROJECT SLIDER
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 1;
+}
+
+.img-container a img:hover{
+    opacity: 0.4;
 }
 
 .img-container{
