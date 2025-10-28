@@ -660,10 +660,11 @@ footer i{
     color: var(--cleartxtcolor);
 }
 
-@media screen and (max-width: 1248px){
+@media screen and (max-width: 1000px){
     html{
         font-size: 0.8em;
     }
+
     /*header{
         height: 50vh;
     }*/
@@ -725,6 +726,18 @@ footer i{
     .project-info{
         flex-direction: column;
         align-items: center;
+    }
+
+    .slide[ii]{
+        flex: 0 0 30vw;
+    }
+
+    .slide[iii]{
+        flex: 0 0 60vw;
+    }
+
+    .slide[iiii]{
+        flex: 0 0 100vw;
     }
 
     footer{
