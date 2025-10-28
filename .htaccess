@@ -1,1 +1,4 @@
 DirectoryIndex projects.html
+
+ErrorDocument 404 /MA.A/errors/404.html
+ErrorDocument 500 /MA.A/errors/500.html
