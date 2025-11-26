@@ -34,7 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
-      const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+      let offset;
+      if(window.innerWidth > 1000){
+        offset = button.dataset.carouselButton === "next" ? 4 : -4;
+      }
+      else{
+        offset = button.dataset.carouselButton === "next" ? 1 : -1;
+      }
+
       const slides = [...carousel.querySelectorAll(".slide")];
       const activeSlide = carousel.querySelector("[data-active]");
       let newIndex = slides.indexOf(activeSlide) + offset;

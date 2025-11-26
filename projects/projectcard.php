@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -81,10 +80,13 @@
 
     <div class="header-container" id="projects-header">
         <div id="up-header">
+            <div class="logo">
+                <img src="../imgs/logos/LOGO BW Ritaglio.png" alt="">
+            </div>
             <h1 class="title-long">MATERIA DARCHITETTURA</h1>
             <h1 class="title-short">MAA</h1>
             <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#8a817c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
-        </div> 
+        </div>
         
         
         <ul id="sidebar" class="">
@@ -98,7 +100,6 @@
 
     <main>
         <section class="card">
-            <div class="project-desc">
             <div class="prj-img">
                 <img src=<?php echo $img ?> alt="">
                 <div class="prj-details">
@@ -110,7 +111,7 @@
         </section>
     </main>
 
-    <footer>
+    <!--<footer>
         <div id="footer-left">
             <p>Architectural Designer</p>
             <a href="https://www.instagram.com/materiadarchitettura/"><i class="fa-brands fa-square-instagram"></i></a>
@@ -125,6 +126,6 @@
             <p>Italian Architecture Firm based in Udine | FVG | Italy</p>
             <p>Via Cjavecis 7/1, Udine, Italy 33100</p>
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>
