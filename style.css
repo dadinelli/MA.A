@@ -28,6 +28,13 @@
     src: url(fonts/Century_Gothic/centurygothic.ttf);
 }
 
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
 html{
     font-family: 'Century_gothic', 'open sans', sans-serif;
     font-weight: 100;
@@ -39,10 +46,9 @@ html{
 
 body{
     text-rendering: optimizeLegibility;
-    overflow: scroll;
     overflow-x: hidden;
     font-weight: 400;
-    margin: 10em 4em 0 4em;
+    /*margin: 10em 4em 0 4em;*/
 }
 
 header{
@@ -52,16 +58,18 @@ header{
     background-size: cover;
 }
 
-.header-container h1{
+.header-container h1, .home-header-container h1{
     /*padding: 0.5em;*/
     font-size: 3.5em;
     font-family: "Century_gothic";
     color: var(--cleartxtcolor);
-    font-weight: bold;
+    font-weight: 100;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-indent: -9999px;
+    height: 0px;
 }
 
 .title-long{
@@ -72,6 +80,16 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.logo{
+    height: 4em;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #up-header{
@@ -92,12 +110,27 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2em 4em;
+    padding: 2em;
+    /*backdrop-filter: blur(15px);*/
+}
+
+.home-header-container{
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;*/
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
     /*backdrop-filter: blur(15px);*/
 }
 
 #projects-header{
-    background-color: var(--bgcolor);
+    /*background-color: var(--bgcolor);*/
+    background-color: transparent;
 }
 
 #home-header h1, #home-header #menu li a, #home-header #menu #currentLink{
@@ -170,49 +203,6 @@ header{
 }
 
 
-#menu{
-    display: none;
-    list-style: none;
-    flex-direction: row;
-    justify-content: space-between;
-    /*padding: 1em 1em;*/
-    text-transform: uppercase;
-    width: 40%;
-    height: 100%;
-}
-
-#menu a{
-    color: white;
-    text-decoration: none;
-    position: relative;
-    /*padding: 0.5em 0;*/
-    margin: 0 0.5em;
-    transition: opacity 0.3s;
-}
-
-#menu a:hover{
-    opacity: 0.5;
-}
-
-/*#menu a:after, #sidebar a:after{
-    content: '';
-    height: 2px;
-    width: 0;
-    background-color: var(--txtcolor);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: 0.4s;
-}
-
-#menu a:hover{
-    color: #ffffff;
-}
-
-#menu a:hover:after{
-    width: 100%;
-}*/
-
 .menu-button{
     display: inline-block;
     background-color: transparent;
@@ -222,8 +212,13 @@ header{
 
 main{
     /*width: 100%;
-    height: 100%;*/
-    height: 55em;
+    height: 55em;*/
+    height: 100%;
+}
+
+.home-main{
+    margin: 0 2em;
+    height: auto;
 }
 
 /*================
@@ -238,111 +233,58 @@ PROGETTI
     margin-top: 5em;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(auto-fit, 150px);
-    row-gap: 1em;
-    column-gap: 1em;
-    margin: 2em;
-}
-
-.item{
-    /*background-color: brown;
-    margin: 0.2em;
-    padding: 2em;*/
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-
-.item a div{
-    z-index: -1;
-    position: absolute;
-    top: 0.5em;
-    left: 0.5em;
-    text-align: left;
-}
-
-.item a img{
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.4s;
-    object-fit: cover;
-}
-
-.item a img:hover{
-    opacity: 0;
-}
-
-.item a h3, .item a p{
-    color: var(--cleartxtcolor);
-}
-
-
-#box1{
-    grid-column: 1/3;
-    grid-row: 1/3
-}
-
-#box2{
-    grid-column: 3/5;
-    grid-row: 1/3;
-}
-
-#box4{
-    grid-column: 4 / 5;
-    grid-row: 3 / 5;
-}
-
-#box3{
-    grid-column: 3/4;
-    grid-row: 3/5;
-}
-
-#box9{
-    grid-column: 1/3;
-}
-
-#box10{
-    grid-column: 3/5;
-}
-
-.separator{
-    color: #3d3d3d;
-    width: 65%;
-    margin: 2em auto;
-}
-
-
 /*PROJECT CARD*/
 
 .main-content{
-    margin-top: 10em;
-    min-height: 100vh;
-    padding: 0 2em;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.main-content h2{
+    font-weight: 100;
 }
 
 .card{
-    display: flex;
-    flex-direction: row;
+    height: 100%;
     /*margin: 0 2em;*/
 }
 
 .prj-img{
-    flex: 2;
-    aspect-ratio: 16/9;
+    /*flex: 2;*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.prj-details {
+    /*color: var(--cleartxtcolor);*/
+    color: white;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+}
+
+.prj-details h2{
+    font-size: 2.5em;
+    font-weight: 100;
 }
 
 .prj-img img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    aspect-ratio: 16/9;
 }
 
 .project-desc{
     flex: 1;
-    padding-right: 1em;
+    /*padding-right: 1em;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -373,119 +315,6 @@ PROGETTI
 .img-center img{
     width: 100%;
     height: 100%;
-}
-
-#servizi, #pubblicazioni{
-    color: var(--txtcolor);
-    margin: 2em 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#service-description{
-    flex: 1;
-    position: relative;
-    padding: 0 1em 0 0;
-}
-
-#publications-description{
-    flex: 1;
-    position: relative;
-    padding: 0 0 0 1em;
-}
-
-#service-description h3, #publications-description h3{
-    font-weight: 100;
-}
-
-#service-description a{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border: 1px solid var(--showmorecolor);
-    color: var(--showmorecolor);
-    text-decoration: none;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    transition: 0.4s;
-}
-
-#publications-description a{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border: 1px solid var(--showmorecolor);
-    color: var(--showmorecolor);
-    text-decoration: none;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    transition: 0.4s;
-}
-
-#service-description a:hover, #publications-description a:hover{
-    background-color: var(--showmorecolor);
-    color: var(--txtcolor);
-}
-
-#service-img-container img{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-
-/*==================
-SLIDER
-==================*/
-
-.slider-wrapper{
-    position: relative;
-    max-width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.slider{
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
-}
-
-.slider img{
-    width: 100%;
-    height: 100%;
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.75;
-    transition:  opacity ease 250ms;
-}
-
-.slider-nav a:hover{
-    opacity: 1;
 }
 
 /*=================
@@ -519,51 +348,86 @@ PROJECT SLIDER
     list-style: none;
     scroll-snap-type: x mandatory;
     overflow-x: hidden;
-    height: 54em;
+    height: 100%;
+    margin: auto ;
+}
+
+.carousel li{
+    height: 100%;
 }
 
 .carousel-wrapper{
     width: 100%;
+    /*height: 100%;*/
+    height: 80vh;
+    /*height: 50em;*/
     position: relative;
-    margin: 10em 0 4.5em 0;
+    margin: auto 0 auto 0;
+    overflow-y: auto;
 }
 
 .next-button, .prev-button{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     align-items: center;
     background-color: transparent;
     border: none;
-    padding: 0.5em;
-    width: 3em;
-    height: 50em;
+    width: 5em;
+    height: 100%;
     transition: all 0.3s;
     z-index: 5;
 }
 
+.next-button svg, .prev-button svg{
+    opacity: 0;
+}
+
 .next-button{
     right: 0;
+    /*transform: translateX(50%);*/
+}
+
+.prev-button{
+    /*transform: translateX(-50%);*/
 }
 
 .next-button:hover, .prev-button:hover{
-    opacity: 0.7;
+    /*background-color: black;*/
     cursor: pointer;
 }
 
-/*.slide img{
+.next-button:hover svg, .prev-button:hover svg{
+    opacity: 1;
+    transition: all 0.3s;
+    /*background-color: black;*/
+    cursor: pointer;
+}
+
+.prev-button:hover{
+    box-shadow: inset 4.5em 0 20px -15px var(--bgcolor);
+}
+
+.next-button:hover{
+    box-shadow: inset -4.5em 0 20px -15px var(--bgcolor);
+}
+
+.slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     scroll-snap-align: start;
     overflow: hidden;
-}*/
+}
 
 .slide, .slide[ii], .slide[iii], .slide[iiii]{
     flex: 0 0 10em;
-    background-color: cornflowerblue;
-    height: 50em;
+    height: 100%;
+    /*background-color: cornflowerblue;*/
+    /*border: 1px solid red;*/
     align-content: center;
     text-align: center;
     color: var(--cleartxtcolor);
@@ -571,36 +435,40 @@ PROJECT SLIDER
     transition: all 0.3s;
     inset: 0;
     position: relative;
+    overflow-y: hidden;
 }
 
-.slide h2{
-    transition: opacity 0.4s, transform 0.4s;
+.slide .submit-button h2{
+    font-family: 'Century_gothic';
     position: absolute;
-    /*transform: translateY(-1.5em);*/
     opacity: 0;
     font-weight: 100;
-    font-size: 1em;
+    font-size: 2em;
     position: absolute;
     text-transform: uppercase;
-    bottom: 0;
-    z-index: auto;
+    bottom: 1em;
+    left: 1.5em;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    color: var(--cleartxtcolor);
+    z-index: 2;
+    white-space: nowrap;
 }
 
-.slide[data-active] h2, .slide a:focus h2{
-    /*border: 1px red solid;*/
-    opacity: 1;
-    font-weight: 100;
-    position: absolute;
-    text-transform: uppercase;
-    bottom: 0;
-    transform: translateY(1.5em);
-    color: var(--cleartxtcolor);
+.slide:hover .submit-button h2{
     transition: opacity 0.4s, transform 0.4s;
-    z-index: auto;
+    opacity: 1;
+}
+
+.slide a:focus img, .slide:hover img{
+    transition: opacity 0.4s, transform 0.4s;
+    opacity: 0.2;
 }
 
 .h2-container{
-    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .slide[ii]{
@@ -617,8 +485,7 @@ PROJECT SLIDER
 
 .slide:hover, .slide a:focus{
     cursor: pointer;
-    opacity: 0.7;
-    outline: none;
+    /*outline: none;*/
 }
 
 .slide a{
@@ -630,8 +497,15 @@ PROJECT SLIDER
 .img-container a img{
     width: 100%;
     height: 100%;
+    overflow: hidden;
     object-fit: cover;
+    opacity: 1;
+    display: block;
 }
+
+/*.img-container a img:hover{
+    opacity: 0.4;
+}*/
 
 .img-container{
     width: 100%;
@@ -639,6 +513,21 @@ PROJECT SLIDER
     z-index: 10;
 }
 
+.slide form{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.submit-button{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
 
 
 /*=================
@@ -647,18 +536,14 @@ CONTATTI
 
 
 .contatti{
-    width: 70%;
-    /*margin: 5em auto auto auto;*/
-    margin: auto;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    height: 100%;
     align-items: center;
+    justify-content: space-around;
 }
 
-.contacts, .map{
-    flex: 1;
-}
 
 .map iframe{
     width: 100%;
@@ -666,7 +551,9 @@ CONTATTI
 }
 
 .contacts{
-    padding: 1em;
+    width: 50%;
+    height: auto;
+    padding: 0 2em;
 }
 
 .contact{
@@ -678,7 +565,7 @@ CONTATTI
 }
 
 .single-contact{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -689,14 +576,17 @@ FOOTER
 =================*/
 
 footer{
+    color: var(--cleartxtcolor);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1em;
     color: white;
+    padding: 2em 0;
 }
 
 #footer-left, #footer-right, #footer-center{
+    color: var(--cleartxtcolor);
     flex: 1;
     text-align: center;
     padding: 1em 0;
@@ -712,13 +602,23 @@ footer i{
     color: var(--cleartxtcolor);
 }
 
-@media screen and (max-width: 1248px){
+.error{
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align:middle;
+}
+
+.error h2{
+    font-size: 4em;
+}
+
+@media screen and (max-width: 1000px){
     html{
         font-size: 0.8em;
     }
-    /*header{
-        height: 50vh;
-    }*/
 
     .title-long{
         display: none;
@@ -730,7 +630,10 @@ footer i{
 
     .contatti{
         flex-direction: column;
+        justify-content: space-around;
+        vertical-align: middle;
         width: 100%;
+        height: 100%;
     }
 
     .single-contact{
@@ -738,19 +641,13 @@ footer i{
     }
 
     .contacts{
-        margin-top: 5em;
-        width: 70%;
         align-items: center;
+        padding: 0 2em;
     }
 
     .menu-button{
         display: inline-block;
     }
-
-    /*.grid-container{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px 150px 150px 150px;
-    }*/
 
     #menu{
         display: none;
@@ -777,6 +674,26 @@ footer i{
     .project-info{
         flex-direction: column;
         align-items: center;
+    }
+
+    .slide[ii]{
+        flex: 0 0 30%;
+    }
+
+    .slide[iii]{
+        flex: 0 0 60%;
+    }
+
+    .slide[iiii]{
+        flex: 0 0 100%;
+    }
+
+    .prj-details h2{
+        font-size: 2em;
+    }
+
+    .prev-button svg, .next-button svg{
+        opacity: 1;
     }
 
     footer{
