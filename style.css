@@ -383,7 +383,7 @@ PROJECT SLIDER
 }
 
 .next-button svg, .prev-button svg{
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .next-button{
@@ -408,11 +408,11 @@ PROJECT SLIDER
 }
 
 .prev-button:hover{
-    box-shadow: inset 4.5em 0 20px -15px var(--bgcolor);
+    /*box-shadow: inset 4.5em 0 20px -15px var(--bgcolor);*/
 }
 
 .next-button:hover{
-    box-shadow: inset -4.5em 0 20px -15px var(--bgcolor);
+    /*box-shadow: inset -4.5em 0 20px -15px var(--bgcolor);*/
 }
 
 .slide img{
