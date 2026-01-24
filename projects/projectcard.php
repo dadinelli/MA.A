@@ -81,9 +81,11 @@
     <div class="header-container" id="projects-header">
         <div id="up-header">
             <div class="logo">
-                <img src="../imgs/logos/LOGO BW Ritaglio.png" alt="">
+                <a href="../projects.html">
+                    <img src="../imgs/logos/LOGO BW Ritaglio.png" alt="">
+                </a>
             </div>
-            <h1 class="title-long">MATERIA DARCHITETTURA</h1>
+            <h1 class="title-long">Materiadarchitettura</h1>
             <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#8a817c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
         </div>
         
