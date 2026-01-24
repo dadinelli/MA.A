@@ -60,20 +60,21 @@ header{
 
 .header-container h1, .home-header-container h1{
     /*padding: 0.5em;*/
-    font-size: 3.5em;
+    font-size: 30px;
     font-family: "Century_gothic";
-    color: var(--cleartxtcolor);
+    color: white;
     font-weight: 100;
     width: 100%;
     white-space: nowrap;
-    overflow: hidden;
+    text-align: right;
+    padding-right: 0.5em;
+    /*overflow: hidden;
     text-overflow: ellipsis;
-    text-indent: -9999px;
-    height: 0px;
+    text-indent: -9999px;*/
 }
 
 .title-long{
-    display: none;
+    /*display: none;*/
 }
 
 .title-short{
@@ -208,6 +209,11 @@ header{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transform: translateY(2px);
+}
+
+.menu-button svg path{
+    height: 100%;
 }
 
 main{
@@ -620,13 +626,13 @@ footer i{
         font-size: 0.8em;
     }
 
-    .title-long{
+    /*.title-long{
         display: none;
     }
 
     .title-short{
         display: block;
-    }
+    }*/
 
     .contatti{
         flex-direction: column;
