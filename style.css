@@ -11,6 +11,7 @@
     --txtcolor: black;
     --cleartxtcolor: #8a817c;
     --showmorecolor: #020202;
+    --visitedlink: #0066cc;
 }
 
 @font-face {
@@ -575,6 +576,10 @@ CONTATTI
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.contact a:visited{
+    color: var(--visitedlink);
 }
 
 /*=================
