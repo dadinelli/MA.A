@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Materiadarchitettura, studio di architettura di Udine che si occuopa di progetti e design">
+    <meta name="keywords" content="studio udine, architettura, materiadarchitettura, progetti, palestra di arrampicata indoor, nel silenzio, in centro, Do-Maru, rinaturalizzare, casa della lavanda, introversa, chez nori, centro diurno acli">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -11,7 +16,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" media="screen">
     <link rel="stylesheet" href="../src/input.css" media="screen">
     <script src="../utils.js"></script>
@@ -31,46 +35,55 @@
                 $nome = "CENTRO DIURNO E SEDE DELLA COOPERATIVA SOCIALE ACLI";
                 $dettagli = "";
                 $luogo = "Cordenons PN";
+                $alt = "";
                 break;
             case 2 :
                 $nome = "NEL SILENZIO";
                 $dettagli = "Abitazione privata";
                 $luogo = "Treppo Grande UD";
+                $alt = "";
                 break;
             case 3 :
                 $nome = "IN CENTRO";
                 $dettagli = "Pista ciclabile";
                 $luogo = "Fiume Veneto PN";
+                $alt = "";
                 break;
             case 4 :
                 $nome = "RINATURALIZZARE";
                 $dettagli = "Pista ciclabile";
                 $luogo = "Fiume Veneto PN";
+                $alt = "";
                 break;
             case 5 :
                 $nome = "CHEZ NORI";
                 $dettagli = "Abitazione privata";
                 $luogo = "Udine UD";
+                $alt = "";
                 break;
             case 6 :
                 $nome = "PALESTRA DI ARRAMPICATA INDOOR";
                 $dettagli = "";
                 $luogo = "Codroipo UD";
+                $alt = "";
                 break;
             case 7 :
                 $nome = "INTROVERSA";
                 $dettagli = "Abitazione privata";
                 $luogo = "Udine UD";
+                $alt = "";
                 break;
             case 8 :
                 $nome = "CASA DELLA LAVANDA";
                 $dettagli = "Abitazione privata";
                 $luogo = "Pozzuolo del Friuli UD";
+                $alt = "";
                 break;
             case 9 :
                 $nome = "DÕ-MARU";
                 $dettagli = "Abitazione privata";
                 $luogo = "Pagnacco UD";
+                $alt = "";
                 break;
         }
     ?>
@@ -85,8 +98,8 @@
                     <img src="../imgs/logos/LOGO BW Ritaglio.png" alt="">
                 </a>
             </div>
-            <h1 class="title-long">Materiadarchitettura</h1>
-            <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#8a817c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
+            <h1 class="title-long"><span class="grey">m</span>ateriadarchitettura</h1>
+            <button class="menu-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#8c8c8c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
         </div>
         
         
