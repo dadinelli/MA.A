@@ -389,6 +389,8 @@ PROJECT SLIDER
     z-index: 5;
 }
 
+
+
 .next-button svg, .prev-button svg{
     /*opacity: 0;*/
 }
@@ -414,12 +416,18 @@ PROJECT SLIDER
     cursor: pointer;
 }
 
-.prev-button:hover{
-    /*box-shadow: inset 4.5em 0 20px -15px var(--bgcolor);*/
+.prev-button:hover svg{
+    /*box-shadow: inset 4.5em 0 20px -15px var(--bgcolor);
+    width: 110%;
+    height: 110%;
+    transition: all 0.3s;*/
 }
 
-.next-button:hover{
-    /*box-shadow: inset -4.5em 0 20px -15px var(--bgcolor);*/
+.next-button:hover svg{
+    /*box-shadow: inset -4.5em 0 20px -15px var(--bgcolor);
+    width: 110%;
+    height: 110%;
+    transition: all 0.3s;*/
 }
 
 .slide img{
