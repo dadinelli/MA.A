@@ -726,4 +726,16 @@ footer i{
     footer{
         flex-direction: column;
     }
+
+    .prj-img{
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .prj-img img{
+        width: auto;
+        max-width: none;
+        height: 100%;
+    }
 }
