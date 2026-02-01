@@ -116,12 +116,12 @@
         <section class="card">
             <div class="prj-img">
                 <img src=<?php echo $img ?> alt="">
-                <div class="prj-details">
+            </div>
+            <div class="prj-details">
                     <h2><?php echo $nome;?></h2>
                     <p><?php echo $dettagli?></p>
                     <p><?php echo $luogo?></p>
                 </div>
-            </div>
         </section>
     </main>
 
