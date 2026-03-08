@@ -1,10 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php $progetto = $_POST["progetto"];
+        /*$nome = $_POST["nome"];*/
+        $img = "../imgs/WEB/";
+        
+        if(isset($progetto)){
+            $img = $img . $progetto . ".jpg";
+        }
+
+        switch($progetto){
+            case 1 :
+                $nome = "CENTRO DIURNO E SEDE DELLA COOPERATIVA SOCIALE ACLI";
+                $dettagli = "";
+                $luogo = "Cordenons PN";
+                $alt = "Sede cooperativa sociale acli";
+                $ph = "";
+                $desc = "Centro diurno e sede della cooperativa sociale ACLI";
+                $keys = "Centro diurno, sede cooperativa ACLI";
+                break;
+            case 2 :
+                $nome = "NEL SILENZIO";
+                $dettagli = "Abitazione privata";
+                $luogo = "Treppo Grande UD";
+                $alt = "Abitazione privata a Treppo Grande";
+                $ph = "";
+                $desc = "";
+                $keys = "";
+                break;
+            case 3 :
+                $nome = "IN CENTRO";
+                $dettagli = "Pista ciclabile";
+                $luogo = "Fiume Veneto PN";
+                $alt = "Pista ciclabile a Fiume Veneto";
+                $ph = "";
+                break;
+            case 4 :
+                $nome = "RINATURALIZZARE";
+                $dettagli = "Pista ciclabile";
+                $luogo = "Fiume Veneto PN";
+                $alt = "Pista ciclabile a Fiume Veneto";
+                $ph = "";
+                break;
+            case 5 :
+                $nome = "CHEZ NORI";
+                $dettagli = "Abitazione privata";
+                $luogo = "Udine UD";
+                $alt = "Abitazione privata a Udine";
+                $ph = "";
+                break;
+            case 6 :
+                $nome = "PALESTRA DI ARRAMPICATA INDOOR";
+                $dettagli = "";
+                $luogo = "Codroipo UD";
+                $alt = "Palestra di arrampicata";
+                $ph = "";
+                break;
+            case 7 :
+                $nome = "INTROVERSA";
+                $dettagli = "Abitazione privata";
+                $luogo = "Udine UD";
+                $alt = "Abitazione privata a Udine";
+                $ph = "";
+                break;
+            case 8 :
+                $nome = "CASA DELLA LAVANDA";
+                $dettagli = "Abitazione privata";
+                $luogo = "Pozzuolo del Friuli UD";
+                $alt = "Abitazione privata a Pozzuolo del friuli";
+                $ph = "";
+                break;
+            case 9 :
+                $nome = "DÕ-MARU";
+                $dettagli = "Abitazione privata";
+                $luogo = "Pagnacco UD";
+                $alt = "Abitazione privata a Pagnacco";
+                $ph = "";
+                break;
+            case  10 :
+                $nome = "SCUOLA PRIMARIA AZZANO DECIMO";
+                $dettagli = "Scuola primaria di Corva";
+                $luogo = "Azzano Decimo PN";
+                $alt = "Scuola primaria di Corva";
+                $ph = "Foto di Elia Falaschi";
+                break;
+            case  11 :
+                $nome = "CENTRO SPORTIVO FONTANAFREDDA";
+                $dettagli = "Centro sportivo";
+                $luogo = "Fontanafredda PN";
+                $alt = "Centro sportivo di Fontanafredda";
+                $ph = "";
+                break;
+        }
+    ?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Materiadarchitettura, studio di architettura di Udine che si occuopa di progetti e design">
-    <meta name="keywords" content="studio udine, architettura, materiadarchitettura, progetti, palestra di arrampicata indoor, nel silenzio, in centro, Do-Maru, rinaturalizzare, casa della lavanda, introversa, chez nori, centro diurno acli">
+    <meta name="description" content="<?php echo $desc?>, Materiadarchitettura, studio di architettura di Udine che si occuopa di progetti e design">
+    <meta name="keywords" content="<?php echo $keys?>, studio udine, architettura, materiadarchitettura, progetti, palestra di arrampicata indoor, nel silenzio, in centro, Do-Maru, rinaturalizzare, casa della lavanda, introversa, chez nori, centro diurno acli">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,71 +116,7 @@
     <title>MA.A</title>
 </head>
 <body>
-    <?php $progetto = $_POST["progetto"];
-        /*$nome = $_POST["nome"];*/
-        $img = "../imgs/WEB/";
-        
-        if(isset($progetto)){
-            $img = $img . $progetto . ".jpg";
-        }
-
-        switch($progetto){
-            case 1 :
-                $nome = "CENTRO DIURNO E SEDE DELLA COOPERATIVA SOCIALE ACLI";
-                $dettagli = "";
-                $luogo = "Cordenons PN";
-                $alt = "";
-                break;
-            case 2 :
-                $nome = "NEL SILENZIO";
-                $dettagli = "Abitazione privata";
-                $luogo = "Treppo Grande UD";
-                $alt = "";
-                break;
-            case 3 :
-                $nome = "IN CENTRO";
-                $dettagli = "Pista ciclabile";
-                $luogo = "Fiume Veneto PN";
-                $alt = "";
-                break;
-            case 4 :
-                $nome = "RINATURALIZZARE";
-                $dettagli = "Pista ciclabile";
-                $luogo = "Fiume Veneto PN";
-                $alt = "";
-                break;
-            case 5 :
-                $nome = "CHEZ NORI";
-                $dettagli = "Abitazione privata";
-                $luogo = "Udine UD";
-                $alt = "";
-                break;
-            case 6 :
-                $nome = "PALESTRA DI ARRAMPICATA INDOOR";
-                $dettagli = "";
-                $luogo = "Codroipo UD";
-                $alt = "";
-                break;
-            case 7 :
-                $nome = "INTROVERSA";
-                $dettagli = "Abitazione privata";
-                $luogo = "Udine UD";
-                $alt = "";
-                break;
-            case 8 :
-                $nome = "CASA DELLA LAVANDA";
-                $dettagli = "Abitazione privata";
-                $luogo = "Pozzuolo del Friuli UD";
-                $alt = "";
-                break;
-            case 9 :
-                $nome = "DÕ-MARU";
-                $dettagli = "Abitazione privata";
-                $luogo = "Pagnacco UD";
-                $alt = "";
-                break;
-        }
-    ?>
+    
 
     <header id="home">
         </header>
@@ -121,6 +151,7 @@
                     <h2><?php echo $nome;?></h2>
                     <p><?php echo $dettagli?></p>
                     <p><?php echo $luogo?></p>
+                    <p><?php echo $ph?></p>
                 </div>
         </section>
     </main>

@@ -589,9 +589,19 @@ CONTATTI
 
 .single-contact{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;*/
+}
+
+.right{
+    text-align: right;
+}
+
+.center{
+    text-align: left;
 }
 
 .contact a:visited{
@@ -647,13 +657,13 @@ footer i{
         font-size: 0.8em;
     }
 
-    /*.title-long{
+    .title-long{
         display: none;
     }
 
     .title-short{
-        display: block;
-    }*/
+        display: none;
+    }
 
     .contatti{
         flex-direction: column;
@@ -664,7 +674,13 @@ footer i{
     }
 
     .single-contact{
+        grid-template-columns: 1fr;
         width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .center, .right{
+        text-align: left;
     }
 
     .contacts{
