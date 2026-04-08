@@ -24,7 +24,7 @@
                 $dettagli = "Abitazione privata";
                 $luogo = "Treppo Grande UD";
                 $alt = "Abitazione privata a Treppo Grande";
-                $ph = "";
+                $ph = "Foto di Elia Falaschi";
                 $desc = "";
                 $keys = "";
                 break;
@@ -33,21 +33,27 @@
                 $dettagli = "Pista ciclabile";
                 $luogo = "Fiume Veneto PN";
                 $alt = "Pista ciclabile a Fiume Veneto";
-                $ph = "";
+                $ph = "con arch. Fabio Fabris";
+                $desc = "";
+                $keys = "";
                 break;
             case 4 :
                 $nome = "RINATURALIZZARE";
                 $dettagli = "Pista ciclabile";
                 $luogo = "Fiume Veneto PN";
                 $alt = "Pista ciclabile a Fiume Veneto";
-                $ph = "";
+                $ph = "con arch. Fabio Fabris";
+                $desc = "";
+                $keys = "";
                 break;
             case 5 :
                 $nome = "CHEZ NORI";
                 $dettagli = "Abitazione privata";
                 $luogo = "Udine UD";
                 $alt = "Abitazione privata a Udine";
-                $ph = "";
+                $ph = "Foto di Elia Falaschi";
+                $desc = "";
+                $keys = "";
                 break;
             case 6 :
                 $nome = "PALESTRA DI ARRAMPICATA INDOOR";
@@ -55,13 +61,17 @@
                 $luogo = "Codroipo UD";
                 $alt = "Palestra di arrampicata";
                 $ph = "";
+                $desc = "";
+                $keys = "";
                 break;
             case 7 :
                 $nome = "INTROVERSA";
                 $dettagli = "Abitazione privata";
                 $luogo = "Udine UD";
                 $alt = "Abitazione privata a Udine";
-                $ph = "";
+                $ph = "Foto di Elia Falaschi";
+                $desc = "";
+                $keys = "";
                 break;
             case 8 :
                 $nome = "CASA DELLA LAVANDA";
@@ -69,13 +79,17 @@
                 $luogo = "Pozzuolo del Friuli UD";
                 $alt = "Abitazione privata a Pozzuolo del friuli";
                 $ph = "";
+                $desc = "";
+                $keys = "";
                 break;
             case 9 :
                 $nome = "DÕ-MARU";
                 $dettagli = "Abitazione privata";
                 $luogo = "Pagnacco UD";
                 $alt = "Abitazione privata a Pagnacco";
-                $ph = "";
+                $ph = "Foto di Elia Falaschi";
+                $desc = "";
+                $keys = "";
                 break;
             case  10 :
                 $nome = "SCUOLA PRIMARIA AZZANO DECIMO";
@@ -83,6 +97,8 @@
                 $luogo = "Azzano Decimo PN";
                 $alt = "Scuola primaria di Corva";
                 $ph = "Foto di Elia Falaschi";
+                $desc = "";
+                $keys = "";
                 break;
             case  11 :
                 $nome = "CENTRO SPORTIVO FONTANAFREDDA";
@@ -90,6 +106,8 @@
                 $luogo = "Fontanafredda PN";
                 $alt = "Centro sportivo di Fontanafredda";
                 $ph = "";
+                $desc = "";
+                $keys = "";
                 break;
         }
     ?>
@@ -99,6 +117,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo $desc?>, Materiadarchitettura, studio di architettura di Udine che si occuopa di progetti e design">
     <meta name="keywords" content="<?php echo $keys?>, studio udine, architettura, materiadarchitettura, progetti, palestra di arrampicata indoor, nel silenzio, in centro, Do-Maru, rinaturalizzare, casa della lavanda, introversa, chez nori, centro diurno acli">
+
+    <link rel="icon" href="../imgs/logos/LOGO 1080 600.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,8 +170,8 @@
             <div class="prj-details">
                     <h2><?php echo $nome;?></h2>
                     <p><?php echo $dettagli?></p>
-                    <p><?php echo $luogo?></p>
-                    <p><?php echo $ph?></p>
+                    <p class="luogo"><?php echo $luogo?></p>
+                    <p class="ph"><?php echo $ph?></p>
                 </div>
         </section>
     </main>

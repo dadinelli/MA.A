@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       let offset;
       if(window.innerWidth > 1000){
-        offset = button.dataset.carouselButton === "next" ? 4 : -4;
+        offset = button.dataset.carouselButton === "next" ? 3 : -3;
       }
       else{
         offset = button.dataset.carouselButton === "next" ? 1 : -1;
