@@ -175,22 +175,5 @@
                 </div>
         </section>
     </main>
-
-    <!--<footer>
-        <div id="footer-left">
-            <p>Architectural Designer</p>
-            <a href="https://www.instagram.com/materiadarchitettura/"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://www.facebook.com/p/Andrea-Martinelli-Architetto-100054494768972/"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-        <div id="footer-center">
-            <p>Martinelli Andrea</p>
-            <p>Malpasso Martina</p>
-            <p>Zonta Leonardo   </p>
-        </div>
-        <div id="footer-right">
-            <p>Italian Architecture Firm based in Udine | FVG | Italy</p>
-            <p>Via Cjavecis 7/1, Udine, Italy 33100</p>
-        </div>
-    </footer>-->
 </body>
 </html>
